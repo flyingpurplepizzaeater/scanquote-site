@@ -1,0 +1,44 @@
+:root {
+  --teal: #2456c7;
+  --teal-dark: #0d1f4a;
+  --ink: #16191c;
+  --muted: #5b6670;
+  --bg: #ffffff;
+  --card: #f3f6f6;
+  --line: #dde4e4;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #eef2f2; --muted: #a9b5b8; --bg: #0d1214; --card: #172024; --line: #26343a; --teal: #7aa2ff; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+a { color: var(--teal); }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+header.site { display: flex; align-items: center; gap: 12px; padding: 18px 0; }
+header.site img { width: 40px; height: 40px; border-radius: 10px; }
+header.site a.brand { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 19px; }
+header.site nav { margin-left: auto; display: flex; gap: 18px; font-size: 15px; }
+.hero { background: linear-gradient(160deg, #2a5bd0, #0a1638); color: #fff; padding: 64px 0 56px; }
+.hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.02em; }
+.hero p.lead { font-size: 20px; max-width: 620px; opacity: 0.92; margin: 0 0 26px; }
+.badge { display: inline-block; background: #fff; color: #0d1f4a; padding: 12px 22px; border-radius: 12px; font-weight: 700; text-decoration: none; }
+.badge.soon { background: rgba(255,255,255,0.14); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+.note { font-size: 14px; opacity: 0.8; margin-top: 14px; }
+section { padding: 48px 0; }
+h2 { font-size: 28px; margin: 0 0 18px; letter-spacing: -0.01em; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+.card h3 { margin: 0 0 8px; font-size: 19px; }
+.card p, .card li { color: var(--muted); margin: 0; }
+.card ul { padding-left: 18px; margin: 0; }
+.shots { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 8px; }
+.shots img { height: 520px; border-radius: 22px; border: 1px solid var(--line); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 600; }
+footer.site { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
+.doc h1 { font-size: 34px; margin: 26px 0 6px; }
+.doc h2 { font-size: 22px; margin-top: 30px; }
+.doc .effective { color: var(--muted); }
+details { border-bottom: 1px solid var(--line); padding: 12px 0; }
+summary { font-weight: 600; cursor: pointer; }
